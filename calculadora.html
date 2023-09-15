@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calcule, a sua calculadora online</title>
+  <link rel="shortcut icon" href="imagens/logo-icon.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="calculadora.css" />
+</head>
+
+<body>
+
+  <div class="principal">
+    <div class="bg">
+    </div>
+    <div class="conteudo">
+      <nav>
+        <div class="wrapper">
+          <p id="boasVindas" class="nav-names"></p>
+          <ul class="nav-links" style="z-index: 1;">
+            <li>
+              <a id="info" class="desktop-item nav-names click">Início</a>
+            </li>
+            <li>
+              <a class="desktop-item nav-names click">Funções</a>
+              <ul class="drop-menu">
+                <li><a class="nav-names click" id="IMC">IMC</a></li>
+                <li><a class="nav-names click" id="area">Área</a></li>
+                <li><a class="nav-names click" id="bhaskara">Bháskara</a></li>
+                <li><a class="nav-names click" id="idade">Idade</a></li>
+                <li><a class="nav-names click" id="calculadora">Calculadora</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="index.html" class="desktop-item nav-names">Sair</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <img src="imagens/logo.png">
+      <p id="conteudo-info" class="p-conteudo">
+        Você se encontra na página inicial do calcule, aqui você poderá utilizar de diversas funções matemáticas para te ajudar no  seu dia a dia. 
+        <b>Para acessar a calculadora e suas funcionalidades utilize o menu superior no item funções.</b>
+      
+      </p>
+      <div id="divCalculadora" class="p-conteudo">        
+      <div class="calculadora">
+        <p id="resultado"></p>
+        <table>
+          <tr>
+            <td><button class="botao" onclick="clean()">C</td>
+            <td><button class="botao" onclick="back()">&lt;</td>
+            <td><button class="botao" onclick="insert('/')">/</button></td>
+            <td><button class="botao" onclick="insert('*')">*</button></td>
+          </tr>
+          <tr>
+            <td><button class="botao" onclick="insert('7')">7</button></td>
+            <td><button class="botao" onclick="insert('8')">8</button></td>
+            <td><button class="botao" onclick="insert('9')">9</button></td>
+            <td><button class="botao" onclick="insert('-')">-</button></td>
+          </tr>
+          <tr>
+            <td><button class="botao" onclick="insert('4')">4</button></td>
+            <td><button class="botao" onclick="insert('5')">5</button></td>
+            <td><button class="botao" onclick="insert('6')">6</button></td>
+            <td><button class="botao" onclick="insert('+')">+</button></td>
+          </tr>
+          <tr>
+            <td><button class="botao" onclick="insert('1')">1</button></td>
+            <td><button class="botao" onclick="insert('2')">2</button></td>
+            <td><button class="botao" onclick="insert('3')">3</button></td>
+            <td rowspan="2"><button class="botao" style="height: 106px;" onclick="calcular()">=</button></td>
+          </tr>
+          <tr>
+            <td colspan="2"><button class="botao" style="width: 106px;" onclick="insert('0')">0</button></td>
+            <td><button class="botao" onclick="insert('.')">.</button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+      <div id="divArea" class="funcoes p-conteudo">
+        <p>Seção para Cálculo da Área do Triângulo. Área é um conceito matemático que pode ser definida como quantidade de espaço bidimensional, ou seja, de superfície.
+          <b>Digite as suas medidas.</b>
+        </p>
+        <form>
+          <label for="base">Base:</label>
+          <input type="number" id="base">
+          <label for="alturaA">Altura:</label>
+          <input type="number" id="alturaA">
+        </form>
+        <div class="botao_2">
+          <button class="botao-funcao" id="calcularArea">Calcular</button>
+        </div>
+        <form>
+          <input type="text" disabled placeholder="Resultado" id="resultadoArea">
+        </form>
+      </div>
+      <div id="divBhaskara" class="funcoes p-conteudo">
+        <p>Seção para cálculo da Bháskara. "A fórmula de Bháskara é um método resolutivo para equações do segundo grau".
+          <b>Digite os valores para A, B e C.</b>
+        </p>
+        <form style="display: inline-flex;">
+          <label class="label-bhaskara" for="A">A:</label>
+          <input type="number" id="A">
+          <label class="label-bhaskara" for="B">B:</label>
+          <input type="number" id="B">
+          <label class="label-bhaskara" for="C">C:</label>
+          <input type="number" id="C">
+        </form>
+        <div class="botao_2">
+          <button class="botao-funcao" id="calcularBhaskara">Calcular</button>
+        </div>
+        <form>
+          <input type="text" disabled placeholder="Resultado" id="resultadoBhaskara">
+        </form>
+      </div>
+      <div id="divIdade" class="funcoes p-conteudo">
+        <p>Seção para cálculo de Idade. Idade pode ser encontrada segundo o ano de nascimento de um individuo.
+          <b>Digite o seu ano de nascimento.</b>
+        </p>
+        <form>
+          <label for="ano">Ano:</label>
+          <input type="number" id="ano">
+        </form>
+        <div class="botao_2">
+          <button class="botao-funcao" id="calcularIdade">Calcular</button>
+        </div>
+        <form>
+          <input type="text" disabled placeholder="Resultado" id="resultadoIdade">
+        </form>
+      </div>
+      <div id="divIMC" class="funcao-imc p-conteudo">
+        <p>Seção para cálculo do IMC. O IMC ou o índice de massa corporal é uma medida internacional usada para calcular se uma pessoa está no peso ideal.
+      <b>Digite o seu peso e altura.</b>
+        </p>
+        <form>
+          <label for="peso">Peso:</label>
+          <input type="number" onblur="mascaraIMC(this)" id="peso"><br><br>
+          <label for="altura">Altura:</label>
+          <input type="number" onblur="mascaraIMC(this)" id="altura">
+        </form>
+        <div class="botao_2">
+          <button class="botao-funcao" id="calcularIMC">Calcular</button>
+        </div>
+        <form>
+          <input type="number" disabled placeholder="Resultado" id="resultadoIMC">
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="calculadora.js"></script>
+</body>
+
+</html>
