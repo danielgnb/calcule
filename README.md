@@ -1,7 +1,7 @@
 ## Calcule, a sua calculadora online
 
 > Projeto desenvolvido com intuito estudantil sobre CSS devido à atividade do Módulo de CSS do programa de <a href="https://fap.softexrecife.org.br/" target="_blank">Formação Acelarada em Programação 2023<a> da Softex Recife.
-### 🔗 <a href="https://danielgnb.github.io/calcule/" target="_blank">Calcule</a>
+### ![Calcule](https://github.com/danielgnb/calcule/blob/main/imagens/logo-icon.png) <a href="https://danielgnb.github.io/calcule/" target="_blank">Calcule</a>
 
  ## 🚀 Tecnologias
 <code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="Javascript"/></code>
