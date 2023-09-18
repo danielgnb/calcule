@@ -5,6 +5,11 @@ window.onload = () => {
     usuario === null ? location.replace('index.html') : boasVindas.innerHTML = `Olá, ${usuario}, bem-vindo!`
 }
 
+const btnCoolab = document.getElementById('colaboradores')
+btnCoolab.addEventListener('click', (event) => {
+    funcoesCalcule(event.currentTarget)
+})
+
 const funcoesCalcule = (funcao) => {
     let arrFuncoes = [
         {elemento: document.getElementById('conteudo-info'), funcao: 'info'},
@@ -12,7 +17,8 @@ const funcoesCalcule = (funcao) => {
         {elemento: document.getElementById('divArea'), funcao: 'area'},
         {elemento: document.getElementById('divBhaskara'), funcao: 'bhaskara'},
         {elemento: document.getElementById('divIdade'), funcao: 'idade'},
-        {elemento: document.getElementById('divIMC'), funcao: 'IMC'}
+        {elemento: document.getElementById('divIMC'), funcao: 'IMC'},
+        {elemento: document.getElementById('divColaboradores'), funcao: 'colaboradores'}
     ]
 
     arrFuncoes.forEach((item) => {
