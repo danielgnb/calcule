@@ -425,14 +425,14 @@ input {
 
 /* Colaboradores */
 
-.principal .conteudo .p-conteudo .colaboradores {
+.principal .conteudo .p-desenv  .colaboradores {
   text-align: center;
   position: absolute;
   top: 75px;
   left: -28%;
 
 }
-.principal .conteudo .p-conteudo .colaboradores .colaborador {
+.principal .conteudo .p-desenv  .colaboradores .colaborador {
   width: 160px;
   float: left;
   left: 30%;
@@ -440,21 +440,21 @@ input {
   margin-left: 10px;
 }
 
-.principal .conteudo .p-conteudo .colaboradores .colaborador .cabecalho {
+.principal .conteudo .p-desenv  .colaboradores .colaborador .cabecalho {
   background-color:   rgba(205, 189, 189, 0.183);
   border-radius: 10px 10px 0px 0px;
   height: 100px;
   
   
 }
-.principal .conteudo .p-conteudo .colaboradores .colaborador .cabecalho img {
+.principal .conteudo .p-desenv  .colaboradores .colaborador .cabecalho img {
   width: 100px;
   border-radius: 50%;
   position: relative;
   bottom: -30px;
 }
 
-.principal .conteudo .p-conteudo .colaboradores .colaborador .rodape {
+.principal .conteudo .p-desenv  .colaboradores .colaborador .rodape {
   background: #FFFFFF;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
   border-radius: 0px 0px 10px 10px;
@@ -463,7 +463,7 @@ input {
   text-align: center;
 }
 
-.principal .conteudo .p-conteudo .colaboradores .colaborador .rodape p{
+.principal .conteudo .p-desenv  .colaboradores .colaborador .rodape p{
   color: black;
   font-size: 13px;
   line-height: 22px;
@@ -472,7 +472,7 @@ input {
   letter-spacing: 0.9px;
   text-transform: uppercase;
 }
-.principal .conteudo .p-conteudo .colaboradores .colaborador .rodape img{
+.principal .conteudo .p-desenv  .colaboradores .colaborador .rodape img{
   width: 27px;
   margin: 5px;
   opacity: 0.4;
@@ -481,10 +481,27 @@ input {
   position: relative;
   
 }
-.principal .conteudo .p-conteudo .colaboradores .colaborador .rodape img:hover {
+.principal .conteudo .p-desenv  .colaboradores .colaborador .rodape img:hover {
   opacity: 0.9;
 }
-.principal .conteudo .p-conteudo .colaboradores .colaborador .rodape .github{
+.principal .conteudo .p-desenv .colaboradores .colaborador .rodape .github{
   width: 26px
 
+}
+.p-desenv {
+  position: absolute;
+    top: 130px;
+    left: 37%;
+    padding: 40px;
+    font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.9px;
+    margin: 20px 20px 30px;
+    text-align: justify;
+    background-color: rgba(205, 189, 189, 0.183);
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    width: 700px;
+    height: 320px;
 }
